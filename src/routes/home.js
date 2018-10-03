@@ -1,3 +1,4 @@
 module.exports = (app) => {
-	app.get('/', (req, res) => {res.render("home")})
+	let HomeController = app.src.controllers.home
+	app.get('/', (req, res) => {HomeController.home(app, req, res)})
 }
